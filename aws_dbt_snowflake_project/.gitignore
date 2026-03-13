@@ -1,0 +1,6 @@
+
+target/
+dbt_packages/
+logs/
+
+aws_dbt_snowflake_project/profiles.yml
