@@ -2,3 +2,32 @@ models:
     - name: bronze 
       config:
         materialized: table
+      
+    - name: silver_bookings
+      columns:
+      - name: BOOKING_ID
+        tests: [unique, not_null]
+
+      - name: LISTING_ID
+        tests:
+          - not_null
+          - relationships:
+              to: ref('silver_listings')
+              field: LISTING_ID
+
+    - name: silver_listings
+      columns:
+      - name: LISTING_ID
+        tests: [unique, not_null]
+
+      - name: HOST_ID
+        tests:
+          - not_null
+          - relationships:
+              to: ref('silver_hosts')
+              field: HOST_ID
+
+    - name: silver_hosts
+      columns:
+      - name: HOST_ID
+        tests: [unique, not_null]
