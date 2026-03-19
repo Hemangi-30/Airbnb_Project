@@ -30,7 +30,7 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 
 # 📊 Architecture
 
-![Revenue Dashboard](./image/)
+![Revenue Dashboard](./image/Architecture.png)
 
 ---
 
