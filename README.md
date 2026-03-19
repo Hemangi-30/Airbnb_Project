@@ -12,7 +12,7 @@
 
 A **modern end-to-end data engineering pipeline** using AWS, Snowflake, DBT, Airflow, and Docker.
 
-This project transforms raw Airbnb data into **analytics-ready datasets** using the **Medallion Architecture (Bronze → Silver → Gold)** and visualizes insights in **Power BI**.
+This project transforms raw Airbnb data into **analytics-ready datasets** using the **Medallion Architecture (Bronze → Silver → Gold)** and delivers **business insights through Power BI dashboards**.
 
 ---
 
@@ -24,13 +24,24 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 ✔ Star Schema for analytics
 ✔ Automated Airflow DAG pipeline
 ✔ Dockerized environment
-✔ Interactive Power BI dashboards
+✔ Business-driven Power BI dashboards
 
 ---
 
 # 📊 Architecture
 
-![Revenue Dashboard](./image/Architecture.png)
+![Architecture](./image/Architecture.png)
+
+---
+
+# 🎯 Why This Project Matters
+
+This project simulates a **real-world data engineering system**:
+
+* Building scalable data pipelines
+* Transforming raw data into analytics-ready models
+* Automating workflows using Airflow
+* Enabling business decision-making through dashboards
 
 ---
 
@@ -68,7 +79,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ![Snowflake](./image/Snowflake.png)
 
 ✔ Data loaded from S3 using COPY INTO
-✔ Staging + Transformation layers
+✔ Supports staging, transformation, and analytics layers
 
 ---
 
@@ -77,7 +88,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ![DBT Lineage](./image/DBT%20Lineage.png)
 
 ✔ End-to-end transformation flow
-✔ Model dependencies
+✔ Clear model dependencies
 
 ---
 
@@ -85,20 +96,80 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ![Data Model](./image/Data%20Modelling.png)
 
-✔ Fact + Dimension tables
-✔ Optimized for BI
+### ⭐ Schema
+
+* Fact Table: `fact_bookings`
+* Dimension Tables: `dim_hosts`, `dim_listings`, `dim_date`
+
+✔ Optimized for BI tools
+✔ Improves query performance
 
 ---
 
 # 📈 Power BI Dashboard
 
-## 💰 Revenue Dashboard
+## 💰 Revenue Intelligence Dashboard
 
 ![Revenue Dashboard](./image/Revenue%20Dashboard.png)
 
-## 👤 Host Dashboard
+### 🔍 Insights:
+
+* Revenue trends over time
+* Top cities contributing to revenue
+* Property-type revenue distribution
+
+---
+
+## 👤 Host Performance Dashboard
 
 ![Host Dashboard](./image/Host%20Dashboard.png)
+
+### 🔍 Insights:
+
+* Top-performing hosts ranking
+* Host experience vs revenue correlation
+* Booking distribution per host
+
+---
+
+# 💼 Business Questions Answered
+
+### 💰 Revenue Insights
+
+* What is the total revenue over time?
+* Which periods generate peak revenue?
+* Which cities contribute the most revenue?
+
+### 🏠 Property Insights
+
+* Which property types generate the most revenue?
+* How does property size affect earnings?
+
+### 👤 Host Insights
+
+* Who are the top-performing hosts?
+* What is the contribution of top hosts to total revenue?
+* How does experience impact performance?
+
+### 📊 Booking Insights
+
+* What are booking trends over time?
+* What is the average revenue per booking and per night?
+
+### 🌍 Geographic Insights
+
+* Which locations drive business growth?
+* Where should expansion be focused?
+
+---
+
+# 📊 Key Metrics Snapshot
+
+* 💰 Total Revenue: ₹6.9M
+* 📅 Total Bookings: 5K
+* 🌙 Total Nights: 37.43K
+* 📈 Avg Revenue per Booking: ₹1.38K
+* 🏆 Top Host Contribution: 2%
 
 ---
 
@@ -106,8 +177,8 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ![Airflow DAG](./image/Airflow%20DAG.png)
 
-✔ Automated pipeline
-✔ Task dependencies
+✔ Fully automated pipeline
+✔ Handles task dependencies
 
 ---
 
@@ -145,12 +216,23 @@ dbt test
 
 ---
 
+# 📚 Key Learnings
+
+* Built an end-to-end data pipeline
+* Implemented Medallion Architecture
+* Hands-on with DBT transformations and snapshots
+* Designed Star Schema for analytics
+* Automated workflows using Airflow
+* Delivered insights using Power BI
+
+---
+
 # 📌 Future Improvements
 
 * Data Quality Checks
-* CI/CD Pipeline
+* CI/CD Pipeline Integration
 * Monitoring & Alerts
-* Real-time processing
+* Real-time data processing
 
 ---
 
