@@ -30,7 +30,7 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 
 # 📊 Architecture
 
-![Revenue Dashboard](./image/Revenue%20Dashboard.png)
+![Revenue Dashboard](./image/)
 
 ---
 
@@ -94,7 +94,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ## 💰 Revenue Dashboard
 
-![Host Dashboard](./image/Host%20Dashboard.png)
+![Revenue Dashboard](./image/Revenue%20Dashboard.png)
 
 ## 👤 Host Dashboard
 
