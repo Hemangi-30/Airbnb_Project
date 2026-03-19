@@ -45,11 +45,11 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 This project simulates a **real-world data engineering system**:
 
 * Building scalable data pipelines
-* 
+  
 * Transforming raw data into analytics-ready models
-* 
+  
 * Automating workflows using Airflow
-* 
+  
 * Enabling business decision-making through dashboards
 
 ---
@@ -196,6 +196,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ![Airflow DAG](./image/Airflow%20DAG.png)
 
 ✔ Fully automated pipeline
+
 ✔ Handles task dependencies
 
 ---
