@@ -30,7 +30,7 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 
 # 📊 Architecture
 
-![Architecture](./Archiitecture.png)
+![Revenue Dashboard](./image/Revenue%20Dashboard.png)
 
 ---
 
@@ -74,7 +74,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 # 🔄 DBT Lineage
 
-![DBT Lineage](./image/DBT Lineage.png)
+![DBT Lineage](./image/DBT%20Lineage.png)
 
 ✔ End-to-end transformation flow
 ✔ Model dependencies
@@ -83,7 +83,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 # 🧱 Data Modeling (Star Schema)
 
-![Data Modeling](./image/Data Modelling.png)
+![Data Model](./image/Data%20Modelling.png)
 
 ✔ Fact + Dimension tables
 ✔ Optimized for BI
@@ -94,17 +94,17 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ## 💰 Revenue Dashboard
 
-![Revenue Dashboard](./image/Revenue Dashboard.png)
+![Host Dashboard](./image/Host%20Dashboard.png)
 
 ## 👤 Host Dashboard
 
-![Host Dashboard](./image/Host Dashboard.png)
+![Host Dashboard](./image/Host%20Dashboard.png)
 
 ---
 
 # 🔄 Airflow DAG
 
-![Airflow DAG](./image/Airflow DAG.png)
+![Airflow DAG](./image/Airflow%20DAG.png)
 
 ✔ Automated pipeline
 ✔ Task dependencies
