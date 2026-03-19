@@ -1,32 +1,57 @@
+---
 
-```
+# 🚀 Airbnb Data Engineering Pipeline
+
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![DBT](https://img.shields.io/badge/dbt-Data%20Transformation-orange)
 ![Airflow](https://img.shields.io/badge/Airflow-Orchestration-red)
 ![Snowflake](https://img.shields.io/badge/Snowflake-DataWarehouse-blue)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
-```
 
 ---
 
-# Airbnb Data Engineering Pipeline
+# 📌 Project Overview
 
-A **modern data engineering pipeline** built using **AWS S3, Snowflake, DBT, Airflow, and Docker** implementing the **Medallion Architecture (Bronze, Silver, Gold)**.
+This project demonstrates a **modern end-to-end data engineering pipeline** built using:
 
-The project demonstrates how raw data can be ingested, transformed, and orchestrated into analytics-ready datasets.
+* **AWS S3** for data ingestion
+* **Snowflake** as a cloud data warehouse
+* **DBT** for transformations
+* **Apache Airflow** for orchestration
+* **Docker** for containerization
+
+The pipeline follows the **Medallion Architecture (Bronze → Silver → Gold)** to transform raw Airbnb data into **analytics-ready datasets** for business insights.
 
 ---
 
-# Project Architecture
+# 🔥 Project Highlights
+
+✔ End-to-End Pipeline (S3 → Snowflake → DBT → Airflow → Power BI)
+✔ Implemented Medallion Architecture (Bronze, Silver, Gold)
+✔ Built SCD Type 2 using DBT Snapshots
+✔ Designed Star Schema for analytics
+✔ Automated workflows using Airflow DAGs
+✔ Containerized environment using Docker
+✔ Built interactive Power BI dashboard
+
+---
+
+# 📊 Architecture
+
+![Architecture](./Archiitecture.png)
+
+---
+
+## 🔍 Architecture Explanation
 
 ```
 GitHub
    ↓
-AWS S3 (Raw Data Storage)
+AWS S3 (Raw Data)
    ↓
 Snowflake Stage
    ↓
-COPY INTO Staging Tables
+Staging Tables
    ↓
 DBT Bronze Layer
    ↓
@@ -37,41 +62,50 @@ DBT Snapshot (SCD Type 2)
 DBT Gold Layer
    ↓
 Airflow Orchestration
+   ↓
+Power BI Dashboard
 ```
 
----
+### Flow Summary:
 
-# Tech Stack
-
-| Tool           | Purpose                           |
-| -------------- | --------------------------------- |
-| AWS S3         | Raw data storage                  |
-| Snowflake      | Cloud Data Warehouse              |
-| DBT            | Data transformation               |
-| Apache Airflow | Workflow orchestration            |
-| Docker         | Containerized Airflow environment |
-| Python         | DAG development                   |
-| GitHub         | Version control                   |
+* Raw CSV data is stored in **S3**
+* Loaded into **Snowflake staging tables**
+* Transformed using **DBT layers**
+* Historical tracking using **Snapshots (SCD Type 2)**
+* Orchestrated using **Airflow DAGs**
+* Visualized in **Power BI**
 
 ---
 
-# Dataset
+# ⚙️ Tech Stack
 
-Airbnb dataset containing:
+| Tool           | Purpose                   |
+| -------------- | ------------------------- |
+| AWS S3         | Raw data storage          |
+| Snowflake      | Cloud Data Warehouse      |
+| DBT            | Data transformation       |
+| Apache Airflow | Workflow orchestration    |
+| Docker         | Containerized environment |
+| Python         | DAG development           |
+| GitHub         | Version control           |
+
+---
+
+# 📂 Dataset
+
+Airbnb dataset includes:
 
 * Bookings
 * Listings
 * Hosts
 
-These datasets are used to build a complete **analytics pipeline**.
+These datasets are processed to generate **business insights and analytics models**.
 
 ---
 
-# Data Pipeline Workflow
+# 🚀 Data Pipeline Workflow
 
-### Step 1: Data Ingestion
-
-Raw Airbnb CSV files are uploaded into **AWS S3 bucket**.
+## 1. Data Ingestion
 
 ```
 S3 Bucket
@@ -82,16 +116,14 @@ S3 Bucket
 
 ---
 
-### Step 2: Load Data into Snowflake
-
-Data is loaded using:
+## 2. Snowflake Loading
 
 * Storage Integration
 * External Stage
 * File Format
-* COPY INTO command
+* `COPY INTO` command
 
-Snowflake staging tables:
+Tables:
 
 ```
 AIRBNB.STAGING.BOOKINGS
@@ -101,13 +133,12 @@ AIRBNB.STAGING.HOSTS
 
 ---
 
-### Step 3: Data Transformation using DBT
+## 3. DBT Transformation Layers
 
-DBT transforms raw data into **Medallion Architecture layers**.
+### 🟤 Bronze Layer (Raw)
 
-### Bronze Layer
-
-Basic ingestion and minimal transformation.
+* Minimal transformation
+* Incremental loading
 
 ```
 bronze_bookings
@@ -117,9 +148,11 @@ bronze_hosts
 
 ---
 
-### Silver Layer
+### ⚪ Silver Layer (Cleaned)
 
-Cleaned and standardized datasets.
+* Data cleaning
+* Business logic
+* Standardization
 
 ```
 silver_bookings
@@ -129,29 +162,83 @@ silver_hosts
 
 ---
 
-### Snapshot Layer
+### 🕰️ Snapshot Layer
 
-DBT snapshot is used to implement **Slowly Changing Dimension (SCD Type 2)**.
-
----
-
-### Gold Layer
-
-Final analytical tables.
-
-```
-Fact Table
-One Big Table (OBT)
-Star Schema Dimensions
-```
+* Implements **SCD Type 2**
+* Tracks historical changes
 
 ---
 
-# Airflow Orchestration
+### 🟡 Gold Layer (Analytics Ready)
 
-Apache Airflow orchestrates the DBT pipeline.
+* Fact Table
+* Dimension Tables
+* One Big Table (OBT)
 
-DAG Tasks:
+---
+
+# 🧱 Data Modeling (Star Schema)
+
+### ⭐ Schema Design
+
+```
+Fact Table:
+- fact_bookings
+
+Dimension Tables:
+- dim_hosts
+- dim_listings
+- dim_date
+```
+
+### 📊 Benefits
+
+* Optimized for BI tools
+* Faster query performance
+* Easy to understand relationships
+
+---
+
+# 📈 Power BI Dashboard
+
+> ⚠️ Add your screenshot here (VERY IMPORTANT)
+
+```
+/images/dashboard.png
+```
+
+## 🎯 Key Insights
+
+* Total Revenue & Booking Trends
+* Top Performing Hosts
+* Location-wise Listings
+* Occupancy Analysis
+* Seasonal Trends
+
+---
+
+## 📌 Key Visuals
+
+* KPI Cards
+* Line Charts (Trends)
+* Top N Analysis
+* Filters & Slicers
+* Interactive Dashboard
+
+---
+
+## 💡 Business Questions Answered
+
+* Who are the top revenue-generating hosts?
+* Which locations perform best?
+* What are booking trends over time?
+* How dependent is revenue on top hosts?
+
+---
+
+# 🔄 Airflow Orchestration
+
+DAG Execution Flow:
 
 ```
 dbt_bronze
@@ -165,19 +252,19 @@ dbt_gold
 dbt_test
 ```
 
-Airflow ensures tasks execute in the correct order.
+✔ Ensures proper dependency execution
+✔ Automates full pipeline
 
 ---
 
-# Dockerized Airflow Environment
+# 🐳 Docker Setup
 
-Airflow runs using Docker containers:
+Airflow runs using:
 
 ```
 airflow-apiserver
 airflow-scheduler
 airflow-worker
-airflow-dag-processor
 airflow-triggerer
 postgres
 redis
@@ -185,12 +272,13 @@ redis
 
 ---
 
-# Running the Project
+# ▶️ Running the Project
 
-### Clone the repository
+### Clone Repo
 
 ```
-git clone <repo-link>
+git clone <your-repo-link>
+cd <project-folder>
 ```
 
 ---
@@ -204,13 +292,11 @@ docker compose up -d
 
 ---
 
-### Access Airflow UI
+### Access UI
 
 ```
 http://localhost:8080
 ```
-
-Default credentials:
 
 ```
 username: airflow
@@ -219,7 +305,7 @@ password: airflow
 
 ---
 
-# DBT Commands Used
+# 📌 DBT Commands
 
 ```
 dbt run --select bronze
@@ -231,37 +317,25 @@ dbt test
 
 ---
 
-# Final Data Models
-
-Gold layer includes:
-
-* Fact table
-* Dimension tables
-* One Big Table (OBT)
-
-These tables are optimized for **analytics and BI reporting**.
-
----
-
-# Future Improvements
+# 📌 Future Improvements
 
 * Add Data Quality Checks
 * Implement Airflow Sensors
-* Integrate CI/CD Pipeline
-* Add Monitoring & Alerts
-* Build Power BI Dashboard
+* CI/CD Pipeline Integration
+* Monitoring & Alerting
+* Real-time Data Processing
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 **Hemangi Vaghasiya**
-
 Aspiring Data Engineer
 
-Skills:
+### 💡 Skills
 
 ```
 Python | SQL | Snowflake | DBT | Airflow | AWS | Docker
 ```
 
+---
