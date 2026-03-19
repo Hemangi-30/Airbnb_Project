@@ -19,11 +19,17 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 # 🔥 Project Highlights
 
 ✔ End-to-End Pipeline (S3 → Snowflake → DBT → Airflow → Power BI)
+
 ✔ Medallion Architecture (Bronze, Silver, Gold)
+
 ✔ SCD Type 2 using DBT Snapshots
+
 ✔ Star Schema for analytics
+
 ✔ Automated Airflow DAG pipeline
+
 ✔ Dockerized environment
+
 ✔ Business-driven Power BI dashboards
 
 ---
@@ -39,8 +45,11 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 This project simulates a **real-world data engineering system**:
 
 * Building scalable data pipelines
+* 
 * Transforming raw data into analytics-ready models
+* 
 * Automating workflows using Airflow
+* 
 * Enabling business decision-making through dashboards
 
 ---
@@ -79,6 +88,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ![Snowflake](./image/Snowflake.png)
 
 ✔ Data loaded from S3 using COPY INTO
+
 ✔ Supports staging, transformation, and analytics layers
 
 ---
@@ -88,6 +98,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ![DBT Lineage](./image/DBT%20Lineage.png)
 
 ✔ End-to-end transformation flow
+
 ✔ Clear model dependencies
 
 ---
@@ -102,6 +113,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 * Dimension Tables: `dim_hosts`, `dim_listings`, `dim_date`
 
 ✔ Optimized for BI tools
+
 ✔ Improves query performance
 
 ---
@@ -115,7 +127,9 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ### 🔍 Insights:
 
 * Revenue trends over time
+  
 * Top cities contributing to revenue
+  
 * Property-type revenue distribution
 
 ---
@@ -127,7 +141,9 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ### 🔍 Insights:
 
 * Top-performing hosts ranking
+  
 * Host experience vs revenue correlation
+  
 * Booking distribution per host
 
 ---
@@ -137,7 +153,9 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 ### 💰 Revenue Insights
 
 * What is the total revenue over time?
+  
 * Which periods generate peak revenue?
+  
 * Which cities contribute the most revenue?
 
 ### 🏠 Property Insights
