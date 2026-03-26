@@ -6,6 +6,7 @@
 ![Snowflake](https://img.shields.io/badge/Snowflake-DataWarehouse-blue)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Visualization-yellow)
+![AWS S3](https://img.shields.io/badge/AWS%20S3-Storage-orange)
 
 ---
 
@@ -269,8 +270,5 @@ dbt test
 **Hemangi Vaghasiya**
 Aspiring Data Engineer
 
-```
-Python | SQL | Snowflake | DBT | Airflow | AWS | Docker
-```
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](www.linkedin.com/in/hemangi-vaghasiya-34b645252)
 ---
