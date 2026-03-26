@@ -270,5 +270,5 @@ dbt test
 **Hemangi Vaghasiya**
 Aspiring Data Engineer
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](www.linkedin.com/in/hemangi-vaghasiya-34b645252)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/hemangi-vaghasiya-34b645252)
 ---
