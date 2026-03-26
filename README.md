@@ -1,14 +1,15 @@
-# 🚀 Airbnb Data Engineering Pipeline
+#  Airbnb Data Engineering Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![DBT](https://img.shields.io/badge/dbt-Data%20Transformation-orange)
 ![Airflow](https://img.shields.io/badge/Airflow-Orchestration-red)
 ![Snowflake](https://img.shields.io/badge/Snowflake-DataWarehouse-blue)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![Power BI](https://img.shields.io/badge/Power%20BI-Visualization-yellow)
 
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 A **modern end-to-end data engineering pipeline** using AWS, Snowflake, DBT, Airflow, and Docker.
 
@@ -16,7 +17,7 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 
 ---
 
-# 🔥 Project Highlights
+#  Project Highlights
 
 ✔ End-to-End Pipeline (S3 → Snowflake → DBT → Airflow → Power BI)
 
@@ -34,13 +35,13 @@ This project transforms raw Airbnb data into **analytics-ready datasets** using 
 
 ---
 
-# 📊 Architecture
+#  Architecture
 
 ![Architecture](./image/Architecture.png)
 
 ---
 
-# 🎯 Why This Project Matters
+#  Why This Project Matters
 
 This project simulates a **real-world data engineering system**:
 
@@ -54,7 +55,7 @@ This project simulates a **real-world data engineering system**:
 
 ---
 
-# ⚙️ Tech Stack
+#  Tech Stack
 
 | Tool      | Purpose          |
 | --------- | ---------------- |
@@ -72,10 +73,18 @@ This project simulates a **real-world data engineering system**:
 * Bookings
 * Listings
 * Hosts
+  
+* ## 📊 Dataset Summary
+
+| 📁 Table Name | 📊 Number of Records |
+|--------------|---------------------|
+| Bookings     | 5,000               |
+| Listings     | 500                 |
+| Hosts        | 200                 |
 
 ---
 
-# 🚀 Pipeline Workflow
+#  Pipeline Workflow
 
 ```
 S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
@@ -93,7 +102,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ---
 
-# 🔄 DBT Lineage
+#  DBT Lineage
 
 ![DBT Lineage](./image/DBT%20Lineage.png)
 
@@ -103,11 +112,11 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ---
 
-# 🧱 Data Modeling (Star Schema)
+# Data Modeling (Star Schema)
 
 ![Data Model](./image/Data%20Modelling.png)
 
-### ⭐ Schema
+###  Schema
 
 * Fact Table: `fact_bookings`
 * Dimension Tables: `dim_hosts`, `dim_listings`, `dim_date`
@@ -120,7 +129,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 # 📈 Power BI Dashboard
 
-## 💰 Revenue Intelligence Dashboard
+##  Revenue Intelligence Dashboard
 
 ![Revenue Dashboard](./image/Revenue%20Dashboard.png)
 
@@ -150,7 +159,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 # 💼 Business Questions Answered
 
-### 💰 Revenue Insights
+###  Revenue Insights
 
 * What is the total revenue over time?
   
@@ -158,7 +167,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
   
 * Which cities contribute the most revenue?
 
-### 🏠 Property Insights
+###  Property Insights
 
 * Which property types generate the most revenue?
 * How does property size affect earnings?
@@ -169,19 +178,19 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 * What is the contribution of top hosts to total revenue?
 * How does experience impact performance?
 
-### 📊 Booking Insights
+###  Booking Insights
 
 * What are booking trends over time?
 * What is the average revenue per booking and per night?
 
-### 🌍 Geographic Insights
+###  Geographic Insights
 
 * Which locations drive business growth?
 * Where should expansion be focused?
 
 ---
 
-# 📊 Key Metrics Snapshot
+#  Key Metrics Snapshot
 
 * 💰 Total Revenue: ₹6.9M
 * 📅 Total Bookings: 5K
@@ -191,7 +200,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ---
 
-# 🔄 Airflow DAG
+#  Airflow DAG
 
 ![Airflow DAG](./image/Airflow%20DAG.png)
 
@@ -201,7 +210,7 @@ S3 → Snowflake → DBT (Bronze → Silver → Gold) → Airflow → Power BI
 
 ---
 
-# 🐳 Docker Setup
+#  Docker Setup
 
 ```
 airflow-apiserver
@@ -213,7 +222,7 @@ redis
 
 ---
 
-# ▶️ Run Project
+#  Run Project
 
 ```
 git clone <your-repo-link>
@@ -223,7 +232,7 @@ docker compose up -d
 
 ---
 
-# 📌 DBT Commands
+#  DBT Commands
 
 ```
 dbt run --select bronze
@@ -235,7 +244,7 @@ dbt test
 
 ---
 
-# 📚 Key Learnings
+#  Key Learnings
 
 * Built an end-to-end data pipeline
 * Implemented Medallion Architecture
